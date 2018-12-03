@@ -196,8 +196,13 @@
 <script>
 var date = new Date();
 function myFunction() {
-  var allgenders = document.getElementsByName("tenmon_array");
-  alert("Total Genders:" + allgenders[1].value);
+  var pathCustomer = "Customer";
+  var pathGood = "Good";
+  var Goods = document.getElementsByName("tenmon_array");
+  // alert("Total Genders:" + Goods.length);
+  // alert("Total Genders:" + Goods[0].value);
+  // alert("Total Genders:" + Goods[1].value);
+  // alert("Total Genders:" + Goods[2].value);
   var first_name = document.getElementById("first_name").value;
   var last_name = document.getElementById("last_name").value;
   var address = document.getElementById("address").value;
@@ -208,9 +213,8 @@ function myFunction() {
   var year = date.getFullYear();
 
 // document.getElementById("demo").innerHTML = "Xin chào";
-var path = "Customer";
     // // Them Oject vao firebase
-    var db=firebase.database().ref(path);
+    var db=firebase.database().ref(pathCustomer);
     db.push({
       address: address,
       id: "7",
@@ -223,6 +227,17 @@ var path = "Customer";
       order_year: String(year),
       status: "1",
     });
+var i = Goods.length -1  ;
+alert("Total Genders:" + i);
+while (i >= 0){
+  var db=firebase.database().ref(pathGood);
+    db.push({
+      id: "7",
+      name: Goods[i].value,
+      price: "10000",
+    });
+    i--; // giảm i xuống nếu không sẽ bị lặp vô hạn
+}
 // reload page
 // location.reload();
 }
