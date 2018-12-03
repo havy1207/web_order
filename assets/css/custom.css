@@ -1,0 +1,146 @@
+.btn-rbt:hover {
+    background: #815aa4 !important;
+    color: #fff !important;
+    border-color: #815aa4 !important;
+}
+
+.btn-primary {
+    background: #815aa4 !important;
+    color: #fff !important;
+    border-color: #815aa4 !important;
+}
+
+section {
+    padding-top: 50px;
+    padding-bottom: 50px; 
+}
+
+/* HOME PAGE */
+
+#header ul.nav-second-main{
+    margin-top: 30px;
+}
+
+#header ul.nav-second-main li i {
+    padding-top:10px;
+}
+
+#topMain.nav-pills>li>a {
+    color: #000;
+    font-weight: bold;
+}
+
+#topMain.nav-pills>li.active>a {
+    color: #000;
+}
+
+#topMain.nav-pills>li:hover > a {
+    color: #815aa4;
+}
+
+#topNav ul.dropdown-menu li a:hover {
+    color: #815aa4;
+}
+
+#topNav #topMain>li.mega-menu{
+    position: relative;
+}
+
+#topNav #topMain>li.mega-menu>ul{
+    width: 500px !important;
+    max-width: 500px !important;
+}
+
+#topNav #topMain>li.mega-menu .menu-c{
+    width: 200px !important;
+}
+
+#topNav #topMain>li.mega-menu .menu-d{
+    width: 300px !important;
+    padding-top: 0px !important;
+}
+
+.box-icon.box-icon-left .box-icon-title>i{
+    background: #fff;
+    color: #815aa4;
+    border: #815aa4 solid 1px;
+}
+
+.rbt-portfolio .item-box {
+	border:#fff solid 10px;
+	background: #fff;
+}
+
+.rbt-portfolio .item-box a{
+    padding: 10px 0 0 ;
+    color: #000;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.rbt-portfolio .item-box a:hover{
+    padding: 10px 0 0 ;
+    color: #815aa4 !important;
+}
+
+.blog-rbt .blog-post-item {
+    margin-bottom: 0;
+    padding-bottom: 30px;
+    padding-top:  30px;    
+}
+
+.blog-rbt .blog-post-item:first-of-type {
+    padding-top:  0px;    
+}
+.blog-rbt .blog-post-item:last-of-type {
+    border-bottom: none;
+}
+
+
+.side-nav .item-box {
+    position: relative;
+}
+.side-nav .item-box .item-box-desc{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #00000053;
+    padding: 5px;
+}
+
+.side-nav .item-box .item-box-desc h3 {
+    font-size: 14px;
+    color: white;
+    font-weight: 600;
+    line-height: 18px;
+    text-align: justify;
+}
+.side-nav .item-box .item-box-desc span {
+    font-style: italic;
+    font-weight: 900;
+    font-size: 14px;
+    color: #878c8f;
+}
+
+#team-us {
+    border-right: #878c8f solid 1px;
+}
+
+#team-us .blog-post-item .blog-post-info{
+    border-bottom: none;
+    margin-bottom: 0px;
+}
+
+#team-us .blog-post-item {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+#team-us .blog-post-item h2 a{
+    font-size: 16px;
+}
+
+#team-us .blog-post-item article{
+    font-size: 14px;
+    text-align: justify;
+}
