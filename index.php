@@ -195,10 +195,13 @@
   
 <script>
 var date = new Date();
+var id_const = 4;
 function myFunction() {
+  var kq = id_const +1;
   var pathCustomer = "Customer";
   var pathGood = "Good";
   var Goods = document.getElementsByName("tenmon_array");
+  alert("id_const" + kq);
   // alert("Total Genders:" + Goods.length);
   // alert("Total Genders:" + Goods[0].value);
   // alert("Total Genders:" + Goods[1].value);
@@ -227,7 +230,7 @@ function myFunction() {
       order_year: String(year),
       status: "1",
     });
-var i = Goods.length -1  ;
+var i = Goods.length -2  ;
 alert("Total Genders:" + i);
 while (i >= 0){
   var db=firebase.database().ref(pathGood);
