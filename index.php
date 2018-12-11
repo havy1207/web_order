@@ -135,9 +135,9 @@
                       <div class="form-group">
                         <div class="input-group" >
                           <select class="form-control" id="tenmon" name="tenmon_array">
-                            <option value="Món A">Món A</option>
-                            <option value="Món B">Món B</option>
-                            <option value="Món C">Món C</option>
+                            <option value="Flan">Flan</option>
+                            <option value="Bánh mì cuộn trứng muối">Bánh mì cuộn trứng muối</option>
+                            <option value="Bánh su chiên">Bánh su chiên</option>
                             <option value="Món D">Món D</option>
                             <option value="Món E">Món E</option>
                           </select>
@@ -147,7 +147,7 @@
                     </div>
                     <div class="col-sm-2 nopadding">
                       <div class="form-group">
-                        <input class="form-control" type="number" value="1" id="soluong">
+                        <input class="form-control" type="number" value="1" id="soluong" name="soluong_array">
                       </div>
                     </div>
                     <!--  -->
@@ -160,9 +160,9 @@
                       <div class="form-group">
                         <div class="input-group">
                         <select class="form-control" id="tenmon" name="tenmon_array">
-                            <option value="Món A">Món A</option>
-                            <option value="Món B">Món B</option>
-                            <option value="Món C">Món C</option>
+                            <option value="Flan">Flan</option>
+                            <option value="Bánh mì cuộn trứng muối">Bánh mì cuộn trứng muối</option>
+                            <option value="Bánh su chiên">Bánh su chiên</option>
                             <option value="Món D">Món D</option>
                             <option value="Món E">Món E</option>
                           </select>
@@ -172,7 +172,7 @@
                     </div>
                     <div class="col-sm-2 nopadding">
                       <div class="form-group">
-                        <input class="form-control" type="number" value="1" id="example-number-input">
+                        <input class="form-control" type="number" value="1" id="example-number-input" name="soluong_array">
                       </div>
                     </div>
                     <div class="input-group-btn">
@@ -199,8 +199,10 @@ var id_const = 4;
 function myFunction() {
   var kq = id_const +1;
   var pathCustomer = "Customer";
-  var pathGood = "Good";
+  var pathOrder = "Order";
+  var pathQuantity = "Order/quantity";
   var Goods = document.getElementsByName("tenmon_array");
+  var Quantity = document.getElementsByName("soluong_array");
   alert("id_const" + kq);
   // alert("Total Genders:" + Goods.length);
   // alert("Total Genders:" + Goods[0].value);
@@ -233,11 +235,11 @@ function myFunction() {
 var i = Goods.length -2  ;
 alert("Total Genders:" + i);
 while (i >= 0){
-  var db=firebase.database().ref(pathGood);
+  var db=firebase.database().ref(pathQuantity);
     db.push({
-      id: "7",
-      name: Goods[i].value,
-      price: "10000",
+      //id: "7",
+      name: Quantity[i].value,
+      //price: "10000",
     });
     i--; // giảm i xuống nếu không sẽ bị lặp vô hạn
 }
@@ -248,8 +250,9 @@ while (i >= 0){
 
   </div>
   <!-- JavaScript -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  
   <script src="https://cdn.jsdelivr.net/momentjs/2.14.1/moment.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase.js"></script>
@@ -267,6 +270,7 @@ while (i >= 0){
       messagingSenderId: "1039479421956"
     };
     firebase.initializeApp(config);
+    database = firebase.database();
 
     // var path = "Customer";
     // // // Them Oject vao firebase
