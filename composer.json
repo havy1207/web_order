@@ -1,0 +1,17 @@
+{
+    "name": "apzentral/ink",
+    "description": "PHP firebase",
+    "type": "project",
+    "license": "GNU3",
+    "authors": [
+        {
+            "name": "Arthur System",
+            "email": "huynhthihavy12@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "kreait/firebase-php": "4.18",
+        "php": ">= 7.2.0"
+    }
+}
