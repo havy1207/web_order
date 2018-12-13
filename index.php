@@ -90,7 +90,7 @@ for ($j; $j <= $soluong_mon; $j++)
 <style type="text/css">
     .table-wrapper-scroll-y {
         height: 50%;
-        width: 110%;
+        width: 105%;
         overflow: auto;
     }
     .tablediv {
